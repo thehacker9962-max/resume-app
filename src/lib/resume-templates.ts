@@ -295,7 +295,7 @@ function initials(name: string): string {
 }
 
 function photoBlock(data: ResumeData): string {
-  if (data.photo && /^(https?:|data:image\/|\/)/i.test(data.photo.trim())) {
+  if (data.photo && typeof data.photo === "string" && /^(https?:|data:image\/|\/)/i.test(data.photo.trim())) {
     return `<img class="photo" src="${esc(data.photo.trim())}" alt="${esc(data.name || "Profile photo")}" />`;
   }
   return `<div class="photo-fallback">${esc(initials(data.name) || "•")}</div>`;
@@ -303,7 +303,7 @@ function photoBlock(data: ResumeData): string {
 
 function contactStack(data: ResumeData): string {
   const parts = [data.email, data.phone, data.location, data.website, data.linkedin].filter(
-    (part) => part && part.trim(),
+    (part) => part && typeof part === "string" && part.trim(),
   );
   if (!parts.length) return "";
   return `<ul class="contact-list">${parts.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>`;

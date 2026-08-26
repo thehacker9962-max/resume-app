@@ -1,0 +1,18 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/ats-checker/page": "app/ats-checker/page.js",
+  "/cookies/page": "app/cookies/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/cover-letter/page": "app/cover-letter/page.js",
+  "/auth/page": "app/auth/page.js",
+  "/how-it-works/page": "app/how-it-works/page.js",
+  "/disclaimer/page": "app/disclaimer/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/page": "app/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/interview-prep/page": "app/interview-prep/page.js",
+  "/pricing/page": "app/pricing/page.js"
+}

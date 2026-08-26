@@ -1,5 +1,6 @@
-import { createServerFn } from "@tanstack/react-start";
-import { streamText, Output, NoObjectGeneratedError } from "ai";
+"use server";
+
+import { streamText, Output } from "ai";
 import { exec } from "child_process";
 import { promisify } from "util";
 import * as fs from "fs/promises";
@@ -21,108 +22,105 @@ import {
 
 const execAsync = promisify(exec);
 
-export const parseResumePdfWithPython = createServerFn({ method: "POST" })
-  .inputValidator((input: unknown) => z.object({ pdfBase64: z.string() }).parse(input))
-  .handler(async ({ data }) => {
-    const tempDir = tmpdir();
-    const tempFilePath = path.join(tempDir, `resume_${Date.now()}.pdf`);
+export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
+  const data = z.object({ pdfBase64: z.string() }).parse(input);
+  const tempDir = tmpdir();
+  const tempFilePath = path.join(tempDir, `resume_${Date.now()}.pdf`);
+  
+  // Write base64 buffer to temp file
+  const buffer = Buffer.from(data.pdfBase64, "base64");
+  await fs.writeFile(tempFilePath, buffer);
+  
+  try {
+    const scriptPath = path.resolve(process.cwd(), "src", "lib", "parser.py");
     
-    // Write base64 buffer to temp file
-    const buffer = Buffer.from(data.pdfBase64, "base64");
-    await fs.writeFile(tempFilePath, buffer);
+    let stdout = "";
+    let stderr = "";
+    try {
+      const result = await execAsync(`python "${scriptPath}" "${tempFilePath}"`);
+      stdout = result.stdout;
+      stderr = result.stderr;
+    } catch (err: any) {
+      stdout = err.stdout || "";
+      stderr = err.stderr || "";
+      const errorMsg = err.message || String(err);
+      return {
+        error: `Python execution failed.\nDetails: ${errorMsg}\nStdout: ${stdout}\nStderr: ${stderr}`
+      };
+    }
+    
+    if (stderr) {
+      console.error("Python parser stderr:", stderr);
+    }
     
     try {
-      const scriptPath = path.resolve(process.cwd(), "src", "lib", "parser.py");
-      
-      let stdout = "";
-      let stderr = "";
-      try {
-        const result = await execAsync(`python "${scriptPath}" "${tempFilePath}"`);
-        stdout = result.stdout;
-        stderr = result.stderr;
-      } catch (err: any) {
-        stdout = err.stdout || "";
-        stderr = err.stderr || "";
-        const errorMsg = err.message || String(err);
-        return {
-          error: `Python execution failed.\nDetails: ${errorMsg}\nStdout: ${stdout}\nStderr: ${stderr}`
-        };
-      }
-      
-      if (stderr) {
-        console.error("Python parser stderr:", stderr);
-      }
-      
-      try {
-        const result = JSON.parse(stdout);
-        return result;
-      } catch (jsonErr) {
-        return {
-          error: `Python output could not be parsed as JSON.\nStdout: ${stdout}\nStderr: ${stderr}`
-        };
-      }
-    } finally {
-      // Clean up
-      await fs.unlink(tempFilePath).catch(() => {});
+      const result = JSON.parse(stdout);
+      return result;
+    } catch (jsonErr) {
+      return {
+        error: `Python output could not be parsed as JSON.\nStdout: ${stdout}\nStderr: ${stderr}`
+      };
     }
-  });
+  } finally {
+    // Clean up
+    await fs.unlink(tempFilePath).catch(() => {});
+  }
+}
 
-export const buildResume = createServerFn({ method: "POST" })
-  .inputValidator((input: unknown) => BuildInput.parse(input))
-  .handler(async ({ data }) => {
-    const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
-      structuredOutputs: true,
-    });
-    const result = streamText({
-      model: gateway(CHAT_MODEL),
-      system: BUILD_SYSTEM,
-      output: Output.object({ schema: AiResumeSchema }),
-      prompt: [
-        data.targetRole ? `TARGET ROLE: ${data.targetRole.slice(0, 500)}` : "",
-        `CANDIDATE INPUT:\n${data.brief.slice(0, 20000)}`,
-      ]
-        .filter(Boolean)
-        .join("\n\n"),
-    });
-    try {
-      return await result.output;
-    } catch (error: any) {
-      console.error("AI Build detailed error:", error);
-      const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
-      throw new Error(
-        `AI Build failed: ${error.message || String(error)}${
-          causeMessage ? ` (Cause: ${causeMessage})` : ""
-        }`
-      );
-    }
+export async function buildResume(input: unknown) {
+  const data = BuildInput.parse(input);
+  const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
+    structuredOutputs: true,
   });
+  const result = streamText({
+    model: gateway(CHAT_MODEL),
+    system: BUILD_SYSTEM,
+    output: Output.object({ schema: AiResumeSchema }),
+    prompt: [
+      data.targetRole ? `TARGET ROLE: ${data.targetRole.slice(0, 500)}` : "",
+      `CANDIDATE INPUT:\n${data.brief.slice(0, 20000)}`,
+    ]
+      .filter(Boolean)
+      .join("\n\n"),
+  });
+  try {
+    return await result.output;
+  } catch (error: any) {
+    console.error("AI Build detailed error:", error);
+    const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
+    throw new Error(
+      `AI Build failed: ${error.message || String(error)}${
+        causeMessage ? ` (Cause: ${causeMessage})` : ""
+      }`
+    );
+  }
+}
 
-export const polishResume = createServerFn({ method: "POST" })
-  .inputValidator((input: unknown) => PolishInput.parse(input))
-  .handler(async ({ data }) => {
-    const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
-      structuredOutputs: true,
-    });
-    const result = streamText({
-      model: gateway(CHAT_MODEL),
-      system: POLISH_SYSTEM,
-      output: Output.object({ schema: AiResumeSchema }),
-      prompt: [
-        data.targetRole ? `TARGET ROLE: ${data.targetRole.slice(0, 500)}` : "",
-        `CURRENT RESUME JSON:\n${JSON.stringify(data.data).slice(0, 20000)}`,
-      ]
-        .filter(Boolean)
-        .join("\n\n"),
-    });
-    try {
-      return await result.output;
-    } catch (error: any) {
-      console.error("AI Polish detailed error:", error);
-      const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
-      throw new Error(
-        `AI Polish failed: ${error.message || String(error)}${
-          causeMessage ? ` (Cause: ${causeMessage})` : ""
-        }`
-      );
-    }
+export async function polishResume(input: unknown) {
+  const data = PolishInput.parse(input);
+  const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
+    structuredOutputs: true,
   });
+  const result = streamText({
+    model: gateway(CHAT_MODEL),
+    system: POLISH_SYSTEM,
+    output: Output.object({ schema: AiResumeSchema }),
+    prompt: [
+      data.targetRole ? `TARGET ROLE: ${data.targetRole.slice(0, 500)}` : "",
+      `CURRENT RESUME JSON:\n${JSON.stringify(data.data).slice(0, 20000)}`,
+    ]
+      .filter(Boolean)
+      .join("\n\n"),
+  });
+  try {
+    return await result.output;
+  } catch (error: any) {
+    console.error("AI Polish detailed error:", error);
+    const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
+    throw new Error(
+      `AI Polish failed: ${error.message || String(error)}${
+        causeMessage ? ` (Cause: ${causeMessage})` : ""
+      }`
+    );
+  }
+}

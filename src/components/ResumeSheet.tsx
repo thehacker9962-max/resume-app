@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect, useRef } from "react";
 import { Download, FileDown, FileText, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "../hooks/use-auth";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "@/hooks/use-navigate";
 import { Button } from "@/components/ui/button";
 import { AdSlot } from "@/components/AdSlot";
 import type { ResumeData } from "@/lib/builder.schemas";

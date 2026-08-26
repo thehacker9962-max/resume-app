@@ -1,0 +1,951 @@
+<!DOCTYPE html><!--sGuOh54WUqmJIXbyzyUYy--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/375a339e59821760.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-b8045e1274458c25.js"/><script src="/_next/static/chunks/4bd1b696-c023c6e3521b1417.js" async=""></script><script src="/_next/static/chunks/255-c5a697ddbf82d774.js" async=""></script><script src="/_next/static/chunks/main-app-e13a1abd3a63af90.js" async=""></script><script src="/_next/static/chunks/720-e077da836e6deae1.js" async=""></script><script src="/_next/static/chunks/106-9fbc1c722d9f2975.js" async=""></script><script src="/_next/static/chunks/app/layout-4284c6258f690886.js" async=""></script><script src="/_next/static/chunks/2-6e8ab1edebb5595c.js" async=""></script><script src="/_next/static/chunks/371-fff2a60acdc778a1.js" async=""></script><script src="/_next/static/chunks/341-8778e69948401863.js" async=""></script><script src="/_next/static/chunks/633-de32f2f2c23c86eb.js" async=""></script><script src="/_next/static/chunks/940-9b5b79c49c20e950.js" async=""></script><script src="/_next/static/chunks/app/page-d53d5594855f4761.js" async=""></script><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>FixMyResume — AI ATS Resume Scorer &amp; LaTeX Editor</title><meta name="description" content="AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace."/><meta property="og:title" content="FixMyResume — AI ATS Resume Scorer &amp; LaTeX Editor"/><meta property="og:description" content="AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace."/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="FixMyResume — AI ATS Resume Scorer &amp; LaTeX Editor"/><meta name="twitter:description" content="AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace."/><link rel="icon" href="/favicon.svg"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=DM+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@400&amp;display=swap"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__className_f367f3"><div hidden=""><!--$--><!--/$--></div><header class="border-b border-border relative bg-background"><div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6"><a class="flex items-center gap-2 font-display text-lg font-bold" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge size-5 text-primary" aria-hidden="true"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg> <!-- -->FixMyResume</a><nav aria-label="Main" class="hidden gap-5 text-sm sm:flex items-center"><a class="transition-colors hover:text-foreground text-foreground font-medium" href="/">Resume builder</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/ats-checker">ATS checker &amp; LaTeX builder</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/cover-letter">AI Cover Letter</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/interview-prep">Interview Prep</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/pricing">Pricing</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/how-it-works">How it works</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/faq">FAQ</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/about">About</a><a class="text-muted-foreground transition-colors hover:text-foreground" href="/contact">Contact</a><div class="ml-2 h-4 w-px bg-border"></div><a class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs" href="/auth">Sign In</a></nav><button class="flex items-center justify-center p-2 text-muted-foreground hover:text-foreground sm:hidden" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu size-5" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></header><div class="mx-auto flex w-full max-w-[1600px] justify-center gap-4 px-4 py-4 sm:px-6 lg:gap-6 lg:py-6"><aside aria-label="Advertisement" class="panel flex items-center justify-center border-dashed bg-secondary/40 sticky top-8 hidden h-[600px] w-32 shrink-0 lg:flex xl:w-40"><div class="text-center text-xs tracking-wide text-muted-foreground uppercase"><p class="font-medium">Ad space</p><p class="mt-1 font-mono text-[10px] normal-case opacity-70">Left skyscraper — 160x600</p></div></aside><main class="w-full max-w-5xl"><header class="text-center"><span class="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles size-3.5 text-primary" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg> No LaTeX needed</span><h1 class="mt-2 font-display text-3xl font-bold sm:text-4xl">Free AI resume builder<br/><span class="text-gradient-brand">with ATS-ready templates</span></h1><p class="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">Describe your background in plain words, let AI structure and write it, then pick a professional template and download a clean A4 PDF — free, no signup.</p></header><aside aria-label="Advertisement" class="panel flex items-center justify-center border-dashed bg-secondary/40 mt-4 h-24 sm:h-28"><div class="text-center text-xs tracking-wide text-muted-foreground uppercase"><p class="font-medium">Ad space</p><p class="mt-1 font-mono text-[10px] normal-case opacity-70">Top leaderboard — 970x90 / 728x90</p></div></aside><div class="mt-6 panel p-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-200 border bg-primary/5 border-primary/20"><div class="flex items-center gap-3"><div class="p-2 rounded-lg shrink-0 transition-colors bg-primary/10 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload size-5" aria-hidden="true"><path d="M12 3v12"></path><path d="m17 8-5-5-5 5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg></div><div class="text-left"><h3 class="font-semibold text-sm">Autofill sections from PDF</h3><p class="text-xs text-muted-foreground">Drag &amp; drop or upload any existing PDF resume to automatically populate the details below.</p></div></div><div class="w-full sm:w-auto shrink-0 flex gap-2"><input type="file" accept=".pdf,.txt,.md" class="hidden"/><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 w-full sm:w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload mr-2 size-4" aria-hidden="true"><path d="M12 3v12"></path><path d="m17 8-5-5-5 5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg>Upload PDF / Resume</button></div></div><div class="flex justify-center xl:hidden mt-6 mb-2"><div class="inline-flex rounded-lg border border-border bg-secondary/50 p-1"><button type="button" class="rounded-md px-4 py-1.5 text-xs font-semibold transition-colors bg-background text-foreground shadow-sm">Live preview</button><button type="button" class="rounded-md px-4 py-1.5 text-xs font-semibold transition-colors text-muted-foreground hover:text-foreground">Edit details</button></div></div><div class="mt-6 grid gap-6 xl:grid-cols-2"><div class="xl:sticky xl:top-8 xl:self-start block"><section class="panel overflow-hidden"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-border px-5 py-3"><p class="flex items-center gap-2 text-xs text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text size-3.5 text-primary" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> A4 live preview</p><div class="flex gap-2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-down" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg> .txt</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg> Download PDF</button></div></div><div class="overflow-hidden bg-secondary/30 p-4 flex justify-center items-start"><div class="bg-white px-[16mm] py-[14mm] text-black shadow-2xl origin-top transition-transform duration-200" style="width:210mm;min-height:297mm;transform:scale(1);margin-bottom:calc(297mm * (1 - 1))"><style>
+.rz { color: #111827; line-height: 1.42; }
+.rz * { box-sizing: border-box; font-family: inherit; }
+.rz h1, .rz h2 { font-weight: 700; }
+.rz h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.rz .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.rz .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.rz .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.rz .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.rz .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.rz .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.rz .strong { font-weight: 700; font-size: 10.5pt; }
+.rz .sub { font-size: 10pt; color: #374151; }
+.rz .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.rz p { margin: 1.5mm 0 0; font-size: 10pt; }
+.rz ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.rz li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.rz .skills { font-size: 10pt; }
+.rz a { color: inherit; text-decoration: none; }
+.rz .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.rz .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.rz .head-flex { display: flex; align-items: center; gap: 6mm; }
+.rz .head-flex .head-text { flex: 1; }
+
+
+.rz { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.rz h1 { color: #0f766e; }
+.rz header { border-bottom: 2pt solid #0f766e; padding-bottom: 3mm; }
+.rz .sec h2 { color: #0f766e; border-left: 2.5pt solid #0f766e; padding-left: 2.5mm; }
+</style><div><div class="rz"><header>
+    <h1>Your Name</h1>
+    
+    
+  </header></div></div></div></div></section></div><div class="hidden xl:block"><div class="space-y-6"><section class="panel space-y-4 p-6"><h2 class="font-display text-lg font-semibold">Basics</h2><div class="flex flex-wrap items-center gap-4 rounded-lg border border-border p-4"><div class="grid size-20 place-items-center rounded-full bg-secondary text-xs text-muted-foreground">No photo</div><div class="space-y-2"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Profile photo — used by the “Photo” templates</label><div class="flex flex-wrap gap-2"><label class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload" aria-hidden="true"><path d="M12 3v12"></path><path d="m17 8-5-5-5 5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg> Upload photo<input type="file" accept="image/*" class="hidden"/></label></div><p class="text-[11px] text-muted-foreground">Tip: many ATS in the US/UK prefer no photo — use a text template there.</p></div></div><div class="grid gap-4 sm:grid-cols-2"><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Full name</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="Aditi Sharma" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Headline</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="Senior Frontend Engineer" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Email</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="you@email.com" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Phone</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="+91 98765 43210" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Location</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="Bengaluru, India" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Website / portfolio</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="yoursite.dev" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">LinkedIn</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="linkedin.com/in/you" value=""/></div></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Professional summary</label><textarea class="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-24" placeholder="2-3 sentences on your experience, focus areas and biggest wins."></textarea></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Skills (comma separated)</label><textarea class="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-20" placeholder="React, TypeScript, Node.js, PostgreSQL"></textarea></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Experience</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add role</button></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Education</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add education</button></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Internships</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add internship</button></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Projects</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add project</button></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Leadership &amp; Community</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add leadership role</button></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Certifications</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add certification</button></div><div class="space-y-3"></div></section><section class="panel space-y-4 p-6"><div class="flex items-center justify-between"><h2 class="font-display text-lg font-semibold">Key Achievements</h2><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-8 rounded-md px-3 text-xs"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg> Add achievement</button></div><div class="space-y-3"></div></section></div></div></div><section class="mt-8"><h2 class="font-display text-xl font-semibold">Choose a template</h2><p class="mt-1.5 text-sm text-muted-foreground">Every template is single-column-safe, uses standard headings and parses cleanly in Workday, Greenhouse and Taleo.</p><div class="mt-3"><div class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-4 sm:grid sm:grid-cols-2 lg:grid-cols-3 scrollbar-none"><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-classic { color: #111827; line-height: 1.42; }
+.tpl-pick-classic * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-classic h1, .tpl-pick-classic h2 { font-weight: 700; }
+.tpl-pick-classic h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-classic .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-classic .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-classic .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-classic .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-classic .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-classic .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-classic .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-classic .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-classic .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-classic p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-classic ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-classic li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-classic .skills { font-size: 10pt; }
+.tpl-pick-classic a { color: inherit; text-decoration: none; }
+.tpl-pick-classic .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-classic .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-classic .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-classic .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-classic { font-family: "Times New Roman", Times, serif; }
+.tpl-pick-classic header { text-align: center; border-bottom: 1.2pt solid #1f2937; padding-bottom: 3mm; }
+.tpl-pick-classic .sec h2 { border-bottom: 0.6pt solid #9ca3af; padding-bottom: 1mm; }
+</style><div><div class="tpl-pick-classic"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Classic Serif</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#1f2937"></span><p class="mt-2 text-xs text-muted-foreground">Centred header, ruled section headings, Times-style serif.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Finance, law, academia, government</p></div></button><button type="button" aria-pressed="true" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-primary bg-primary/5"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-modern { color: #111827; line-height: 1.42; }
+.tpl-pick-modern * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-modern h1, .tpl-pick-modern h2 { font-weight: 700; }
+.tpl-pick-modern h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-modern .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-modern .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-modern .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-modern .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-modern .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-modern .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-modern .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-modern .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-modern .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-modern p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-modern ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-modern li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-modern .skills { font-size: 10pt; }
+.tpl-pick-modern a { color: inherit; text-decoration: none; }
+.tpl-pick-modern .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-modern .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-modern .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-modern .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-modern { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-modern h1 { color: #0f766e; }
+.tpl-pick-modern header { border-bottom: 2pt solid #0f766e; padding-bottom: 3mm; }
+.tpl-pick-modern .sec h2 { color: #0f766e; border-left: 2.5pt solid #0f766e; padding-left: 2.5mm; }
+</style><div><div class="tpl-pick-modern"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Modern Accent</span><span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check size-4 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#0f766e"></span><p class="mt-2 text-xs text-muted-foreground">Clean sans-serif with an emerald accent rail on headings.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Tech, product, marketing</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-minimal { color: #111827; line-height: 1.42; }
+.tpl-pick-minimal * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-minimal h1, .tpl-pick-minimal h2 { font-weight: 700; }
+.tpl-pick-minimal h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-minimal .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-minimal .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-minimal .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-minimal .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-minimal .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-minimal .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-minimal .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-minimal .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-minimal .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-minimal p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-minimal ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-minimal li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-minimal .skills { font-size: 10pt; }
+.tpl-pick-minimal a { color: inherit; text-decoration: none; }
+.tpl-pick-minimal .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-minimal .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-minimal .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-minimal .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-minimal { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-minimal h1 { font-weight: 300; font-size: 26pt; }
+.tpl-pick-minimal .sec { margin-top: 7mm; }
+.tpl-pick-minimal .sec h2 { font-weight: 500; color: #6b7280; letter-spacing: 2pt; }
+.tpl-pick-minimal .strong { font-weight: 600; }
+</style><div><div class="tpl-pick-minimal"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Minimal Air</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#111827"></span><p class="mt-2 text-xs text-muted-foreground">Generous whitespace, light weights, no rules or colour.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Design, UX, consulting</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-sidebar { color: #111827; line-height: 1.42; }
+.tpl-pick-sidebar * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-sidebar h1, .tpl-pick-sidebar h2 { font-weight: 700; }
+.tpl-pick-sidebar h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-sidebar .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-sidebar .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-sidebar .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-sidebar .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-sidebar .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-sidebar .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-sidebar .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-sidebar .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-sidebar .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-sidebar p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-sidebar ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-sidebar li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-sidebar .skills { font-size: 10pt; }
+.tpl-pick-sidebar a { color: inherit; text-decoration: none; }
+.tpl-pick-sidebar .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-sidebar .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-sidebar .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-sidebar .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-sidebar { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-sidebar h1 { color: #1d4ed8; font-size: 22pt; }
+.tpl-pick-sidebar .grid { display: flex; gap: 8mm; margin-top: 5mm; }
+.tpl-pick-sidebar .rail { width: 58mm; flex: none; border-right: 0.6pt solid #d1d5db; padding-right: 6mm; }
+.tpl-pick-sidebar .body { flex: 1; }
+.tpl-pick-sidebar .sec h2 { color: #1d4ed8; }
+.tpl-pick-sidebar .rail .sec { margin-top: 0; margin-bottom: 6mm; }
+.tpl-pick-sidebar .rail p, .tpl-pick-sidebar .rail li { font-size: 9pt; }
+</style><div><div class="tpl-pick-sidebar"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header>
+      <div class="grid">
+        <aside class="rail"><section class="sec"><h2>Skills</h2><ul><li>React</li><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>GraphQL</li><li>Testing Library</li><li>Web Performance</li><li>Accessibility (WCAG 2.2)</li><li>CI/CD</li><li>PostgreSQL</li></ul></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></aside>
+        <div class="body"><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section></div>
+      </div>
+    </div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Sidebar Pro</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#1d4ed8"></span><p class="mt-2 text-xs text-muted-foreground">Left rail with contact, skills and education.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Engineering, data, operations</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-compact { color: #111827; line-height: 1.42; }
+.tpl-pick-compact * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-compact h1, .tpl-pick-compact h2 { font-weight: 700; }
+.tpl-pick-compact h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-compact .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-compact .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-compact .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-compact .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-compact .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-compact .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-compact .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-compact .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-compact .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-compact p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-compact ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-compact li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-compact .skills { font-size: 10pt; }
+.tpl-pick-compact a { color: inherit; text-decoration: none; }
+.tpl-pick-compact .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-compact .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-compact .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-compact .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-compact { font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; line-height: 1.32; }
+.tpl-pick-compact h1 { font-size: 20pt; }
+.tpl-pick-compact .sec { margin-top: 3.5mm; }
+.tpl-pick-compact .item { margin-bottom: 2mm; }
+.tpl-pick-compact .sec h2 { background: #f1f5f9; padding: 1mm 2mm; letter-spacing: 0.8pt; }
+.tpl-pick-compact li, .tpl-pick-compact p, .tpl-pick-compact .sub, .tpl-pick-compact .skills { font-size: 9.5pt; }
+.tpl-pick-compact .skills { column-count: 2; column-gap: 8mm; }
+</style><div><div class="tpl-pick-compact"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Compact One-Page</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#334155"></span><p class="mt-2 text-xs text-muted-foreground">Dense two-column skills, tight spacing to fit one page.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Senior profiles with long histories</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-executive { color: #111827; line-height: 1.42; }
+.tpl-pick-executive * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-executive h1, .tpl-pick-executive h2 { font-weight: 700; }
+.tpl-pick-executive h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-executive .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-executive .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-executive .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-executive .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-executive .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-executive .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-executive .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-executive .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-executive .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-executive p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-executive ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-executive li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-executive .skills { font-size: 10pt; }
+.tpl-pick-executive a { color: inherit; text-decoration: none; }
+.tpl-pick-executive .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-executive .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-executive .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-executive .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-executive { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-executive header { background: #0f172a; color: #fff; padding: 5mm 6mm; margin: -2mm -6mm 0; }
+.tpl-pick-executive h1 { color: #fff; text-transform: uppercase; letter-spacing: 1.5pt; font-size: 20pt; }
+.tpl-pick-executive header .headline, .tpl-pick-executive header .contact { color: #e2e8f0; }
+.tpl-pick-executive .sec h2 { border-bottom: 1.5pt solid #0f172a; padding-bottom: 1mm; }
+</style><div><div class="tpl-pick-executive"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Executive Bold</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#0f172a"></span><p class="mt-2 text-xs text-muted-foreground">Full-width name band with uppercase, high-contrast headings.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Directors, managers, senior sales</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-timeline { color: #111827; line-height: 1.42; }
+.tpl-pick-timeline * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-timeline h1, .tpl-pick-timeline h2 { font-weight: 700; }
+.tpl-pick-timeline h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-timeline .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-timeline .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-timeline .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-timeline .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-timeline .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-timeline .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-timeline .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-timeline .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-timeline .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-timeline p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-timeline ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-timeline li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-timeline .skills { font-size: 10pt; }
+.tpl-pick-timeline a { color: inherit; text-decoration: none; }
+.tpl-pick-timeline .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-timeline .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-timeline .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-timeline .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-timeline { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-timeline h1 { color: #b45309; }
+.tpl-pick-timeline header { border-bottom: 1pt solid #d6d3d1; padding-bottom: 3mm; }
+.tpl-pick-timeline .sec h2 { color: #b45309; }
+.tpl-pick-timeline .item { position: relative; padding-left: 6mm; border-left: 1.2pt solid #e7e5e4; }
+.tpl-pick-timeline .item::before { content: ""; position: absolute; left: -1.6mm; top: 1.6mm; width: 3mm; height: 3mm;
+  border-radius: 50%; background: #b45309; }
+</style><div><div class="tpl-pick-timeline"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Timeline</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#b45309"></span><p class="mt-2 text-xs text-muted-foreground">Vertical rule with dated milestones down the experience column.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Career changers, project-heavy roles</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-academic { color: #111827; line-height: 1.42; }
+.tpl-pick-academic * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-academic h1, .tpl-pick-academic h2 { font-weight: 700; }
+.tpl-pick-academic h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-academic .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-academic .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-academic .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-academic .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-academic .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-academic .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-academic .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-academic .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-academic .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-academic p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-academic ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-academic li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-academic .skills { font-size: 10pt; }
+.tpl-pick-academic a { color: inherit; text-decoration: none; }
+.tpl-pick-academic .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-academic .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-academic .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-academic .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-academic { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; }
+.tpl-pick-academic header { text-align: left; border-bottom: 0.8pt solid #4c1d95; padding-bottom: 3mm; }
+.tpl-pick-academic h1 { color: #4c1d95; font-size: 22pt; }
+.tpl-pick-academic .sec h2 { font-variant: small-caps; text-transform: none; letter-spacing: 0.5pt; color: #4c1d95; font-size: 12pt; }
+.tpl-pick-academic .sec { margin-top: 6mm; }
+</style><div><div class="tpl-pick-academic"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Academic CV</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#4c1d95"></span><p class="mt-2 text-xs text-muted-foreground">Serif, small caps headings, room for publications and certifications.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Research, teaching, PhD applications</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-photo-modern { color: #111827; line-height: 1.42; }
+.tpl-pick-photo-modern * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-photo-modern h1, .tpl-pick-photo-modern h2 { font-weight: 700; }
+.tpl-pick-photo-modern h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-photo-modern .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-photo-modern .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-photo-modern .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-modern .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-photo-modern .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-modern .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-photo-modern .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-photo-modern .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-photo-modern .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-photo-modern p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-photo-modern ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-photo-modern li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-modern .skills { font-size: 10pt; }
+.tpl-pick-photo-modern a { color: inherit; text-decoration: none; }
+.tpl-pick-photo-modern .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-photo-modern .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-photo-modern .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-photo-modern .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-photo-modern { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-photo-modern h1 { color: #0f766e; }
+.tpl-pick-photo-modern header { border-bottom: 2pt solid #0f766e; padding-bottom: 3mm; }
+.tpl-pick-photo-modern .photo, .tpl-pick-photo-modern .photo-fallback { border-radius: 50%; border: 1.5pt solid #0f766e; }
+.tpl-pick-photo-modern .sec h2 { color: #0f766e; border-left: 2.5pt solid #0f766e; padding-left: 2.5mm; }
+</style><div><div class="tpl-pick-photo-modern"><header><div class="head-flex"><div class="photo-fallback">AS</div><div class="head-text">
+      <h1>Aditi Sharma</h1>
+      <p class="headline">Senior Frontend Engineer</p>
+      <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+    </div></div></header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Photo Modern</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#0f766e"></span><p class="mt-2 text-xs text-muted-foreground">Round headshot beside the name with an emerald accent bar.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Client-facing, sales, hospitality</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-photo-sidebar { color: #111827; line-height: 1.42; }
+.tpl-pick-photo-sidebar * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-photo-sidebar h1, .tpl-pick-photo-sidebar h2 { font-weight: 700; }
+.tpl-pick-photo-sidebar h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-photo-sidebar .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-photo-sidebar .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-photo-sidebar .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-sidebar .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-photo-sidebar .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-sidebar .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-photo-sidebar .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-photo-sidebar .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-photo-sidebar .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-photo-sidebar p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-photo-sidebar ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-photo-sidebar li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-sidebar .skills { font-size: 10pt; }
+.tpl-pick-photo-sidebar a { color: inherit; text-decoration: none; }
+.tpl-pick-photo-sidebar .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-photo-sidebar .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-photo-sidebar .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-photo-sidebar .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-photo-sidebar { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-photo-sidebar h1 { color: #1d4ed8; font-size: 21pt; }
+.tpl-pick-photo-sidebar .grid { display: flex; gap: 7mm; }
+.tpl-pick-photo-sidebar .rail { width: 58mm; flex: none; background: #eff5ff; padding: 5mm; margin-top: -2mm; }
+.tpl-pick-photo-sidebar .body { flex: 1; }
+.tpl-pick-photo-sidebar .rail .photo, .tpl-pick-photo-sidebar .rail .photo-fallback { width: 38mm; height: 38mm; border-radius: 3mm; margin: 0 auto 4mm; }
+.tpl-pick-photo-sidebar .rail .sec { margin-top: 0; margin-bottom: 5mm; }
+.tpl-pick-photo-sidebar .rail p, .tpl-pick-photo-sidebar .rail li { font-size: 9pt; }
+.tpl-pick-photo-sidebar .rail h2 { color: #1d4ed8; }
+.tpl-pick-photo-sidebar .sec h2 { color: #1d4ed8; }
+.tpl-pick-photo-sidebar .contact-list { list-style: none; padding: 0; margin: 0; }
+</style><div><div class="tpl-pick-photo-sidebar">
+      <div class="grid">
+        <aside class="rail"><div class="photo-fallback">AS</div><section class="sec"><h2>Contact</h2><ul class="contact-list"><li>aditi.sharma@email.com</li><li>+91 98765 43210</li><li>Bengaluru, India</li><li>aditi.dev</li><li>linkedin.com/in/aditisharma</li></ul></section><section class="sec"><h2>Skills</h2><ul><li>React</li><li>TypeScript</li><li>Next.js</li><li>Node.js</li><li>GraphQL</li><li>Testing Library</li><li>Web Performance</li><li>Accessibility (WCAG 2.2)</li><li>CI/CD</li><li>PostgreSQL</li></ul></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></aside>
+        <div class="body">
+          <header>
+            <h1>Aditi Sharma</h1>
+            <p class="headline">Senior Frontend Engineer</p>
+          </header>
+          <section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section>
+        </div>
+      </div>
+    </div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Photo Sidebar</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#1d4ed8"></span><p class="mt-2 text-xs text-muted-foreground">Tinted left rail with headshot, contact details and skills.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Design, marketing, international CVs</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-photo-elegant { color: #111827; line-height: 1.42; }
+.tpl-pick-photo-elegant * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-photo-elegant h1, .tpl-pick-photo-elegant h2 { font-weight: 700; }
+.tpl-pick-photo-elegant h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-photo-elegant .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-photo-elegant .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-photo-elegant .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-elegant .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-photo-elegant .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-elegant .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-photo-elegant .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-photo-elegant .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-photo-elegant .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-photo-elegant p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-photo-elegant ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-photo-elegant li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-elegant .skills { font-size: 10pt; }
+.tpl-pick-photo-elegant a { color: inherit; text-decoration: none; }
+.tpl-pick-photo-elegant .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-photo-elegant .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-photo-elegant .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-photo-elegant .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-photo-elegant { font-family: "Times New Roman", Times, serif; }
+.tpl-pick-photo-elegant header { text-align: center; border-bottom: 0.8pt solid #7c2d12; padding-bottom: 3mm; }
+.tpl-pick-photo-elegant .photo, .tpl-pick-photo-elegant .photo-fallback { width: 32mm; height: 32mm; border-radius: 50%; margin: 0 auto 3mm; border: 1pt solid #7c2d12; }
+.tpl-pick-photo-elegant h1 { color: #7c2d12; letter-spacing: 1pt; }
+.tpl-pick-photo-elegant .sec h2 { color: #7c2d12; border-bottom: 0.5pt solid #d6d3d1; padding-bottom: 1mm; }
+</style><div><div class="tpl-pick-photo-elegant"><header><div class="photo-fallback">AS</div>
+      <h1>Aditi Sharma</h1>
+      <p class="headline">Senior Frontend Engineer</p>
+      <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+    </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Photo Elegant</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#7c2d12"></span><p class="mt-2 text-xs text-muted-foreground">Centred headshot above a serif nameplate and ruled sections.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Europe/Middle East CVs, academia</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-creative-gradient { color: #111827; line-height: 1.42; }
+.tpl-pick-creative-gradient * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-creative-gradient h1, .tpl-pick-creative-gradient h2 { font-weight: 700; }
+.tpl-pick-creative-gradient h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-creative-gradient .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-creative-gradient .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-creative-gradient .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-creative-gradient .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-creative-gradient .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-creative-gradient .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-creative-gradient .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-creative-gradient .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-creative-gradient .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-creative-gradient p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-creative-gradient ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-creative-gradient li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-creative-gradient .skills { font-size: 10pt; }
+.tpl-pick-creative-gradient a { color: inherit; text-decoration: none; }
+.tpl-pick-creative-gradient .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-creative-gradient .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-creative-gradient .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-creative-gradient .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-creative-gradient { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+.tpl-pick-creative-gradient h1 { font-size: 26pt; background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.tpl-pick-creative-gradient header { border-bottom: 1.5pt solid #e5e7eb; padding-bottom: 4mm; }
+.tpl-pick-creative-gradient .sec h2 { color: #6366f1; font-size: 9.5pt; text-transform: uppercase; letter-spacing: 0.5pt; }
+.tpl-pick-creative-gradient .skills { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 1.5mm; }
+.tpl-pick-creative-gradient .skills span { font-size: 8.5pt; background: #e0e7ff; color: #3730a3; padding: 1mm 2.5mm; border-radius: 4px; font-weight: 500; }
+</style><div><div class="tpl-pick-creative-gradient"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><div class="skills"><span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>GraphQL</span><span>Testing Library</span><span>Web Performance</span><span>Accessibility (WCAG 2.2)</span><span>CI/CD</span><span>PostgreSQL</span></div></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Creative Indigo Gradient</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#6366f1"></span><p class="mt-2 text-xs text-muted-foreground">Vibrant gradient headers with clean monospace tags for creative tech roles.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Designers, UX, frontend engineers, marketers</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-photo-executive { color: #111827; line-height: 1.42; }
+.tpl-pick-photo-executive * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-photo-executive h1, .tpl-pick-photo-executive h2 { font-weight: 700; }
+.tpl-pick-photo-executive h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-photo-executive .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-photo-executive .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-photo-executive .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-executive .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-photo-executive .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-executive .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-photo-executive .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-photo-executive .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-photo-executive .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-photo-executive p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-photo-executive ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-photo-executive li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-photo-executive .skills { font-size: 10pt; }
+.tpl-pick-photo-executive a { color: inherit; text-decoration: none; }
+.tpl-pick-photo-executive .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-photo-executive .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-photo-executive .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-photo-executive .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-photo-executive { font-family: Georgia, serif; font-size: 10.5pt; }
+.tpl-pick-photo-executive header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2pt solid #1e3a8a; padding-bottom: 4mm; }
+.tpl-pick-photo-executive h1 { color: #1e3a8a; font-size: 24pt; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.tpl-pick-photo-executive .photo, .tpl-pick-photo-executive .photo-fallback { width: 28mm; height: 28mm; border-radius: 0; border: 2pt solid #1e3a8a; }
+.tpl-pick-photo-executive .sec h2 { color: #1e3a8a; border-bottom: 1px solid #1e3a8a; padding-bottom: 1mm; font-size: 11pt; font-weight: 700; }
+</style><div><div class="tpl-pick-photo-executive"><header>
+      <div class="head-text">
+        <h1>Aditi Sharma</h1>
+        <p class="headline">Senior Frontend Engineer</p>
+        <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+      </div>
+      <div class="photo-fallback">AS</div>
+    </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Photo Executive</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#1e3a8a"></span><p class="mt-2 text-xs text-muted-foreground">Ruled dual-column layout with a photo band and high-status serif header.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Executives, project managers, consultants</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-tech-minimal { color: #111827; line-height: 1.42; }
+.tpl-pick-tech-minimal * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-tech-minimal h1, .tpl-pick-tech-minimal h2 { font-weight: 700; }
+.tpl-pick-tech-minimal h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-tech-minimal .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-tech-minimal .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-tech-minimal .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-tech-minimal .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-tech-minimal .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-tech-minimal .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-tech-minimal .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-tech-minimal .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-tech-minimal .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-tech-minimal p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-tech-minimal ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-tech-minimal li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-tech-minimal .skills { font-size: 10pt; }
+.tpl-pick-tech-minimal a { color: inherit; text-decoration: none; }
+.tpl-pick-tech-minimal .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-tech-minimal .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-tech-minimal .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-tech-minimal .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-tech-minimal { font-family: Courier, monospace; font-size: 9.5pt; line-height: 1.35; }
+.tpl-pick-tech-minimal h1 { font-size: 22pt; font-weight: 700; color: #0d9488; }
+.tpl-pick-tech-minimal header { border-bottom: 1px dashed #9ca3af; padding-bottom: 3mm; }
+.tpl-pick-tech-minimal .sec h2 { color: #0d9488; border-bottom: 1px dashed #0d9488; padding-bottom: 0.5mm; font-size: 9.5pt; font-weight: 700; }
+.tpl-pick-tech-minimal .strong { color: #0f172a; font-weight: 700; }
+.tpl-pick-tech-minimal .item { border-left: 1px dotted #cbd5e1; padding-left: 3.5mm; margin-bottom: 3.5mm; }
+</style><div><div class="tpl-pick-tech-minimal"><header>
+    <h1>Aditi Sharma</h1>
+    <p class="headline">Senior Frontend Engineer</p>
+    <p class="contact">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</p>
+  </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Skills</h2><p class="skills">React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Next.js &nbsp;•&nbsp; Node.js &nbsp;•&nbsp; GraphQL &nbsp;•&nbsp; Testing Library &nbsp;•&nbsp; Web Performance &nbsp;•&nbsp; Accessibility (WCAG 2.2) &nbsp;•&nbsp; CI/CD &nbsp;•&nbsp; PostgreSQL</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Tech Minimalist</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#0d9488"></span><p class="mt-2 text-xs text-muted-foreground">Clean monospace accent elements, structured grid borders, best for devs.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Software developers, sysadmins, DevOps</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-enhancv-joanna { color: #111827; line-height: 1.42; }
+.tpl-pick-enhancv-joanna * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-enhancv-joanna h1, .tpl-pick-enhancv-joanna h2 { font-weight: 700; }
+.tpl-pick-enhancv-joanna h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-enhancv-joanna .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-enhancv-joanna .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-enhancv-joanna .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-joanna .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-enhancv-joanna .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-joanna .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-enhancv-joanna .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-enhancv-joanna .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-enhancv-joanna .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-enhancv-joanna p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-enhancv-joanna ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-enhancv-joanna li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-joanna .skills { font-size: 10pt; }
+.tpl-pick-enhancv-joanna a { color: inherit; text-decoration: none; }
+.tpl-pick-enhancv-joanna .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-enhancv-joanna .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-enhancv-joanna .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-enhancv-joanna .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-enhancv-joanna { font-family: "Space Grotesk", sans-serif; font-size: 9.5pt; line-height: 1.4; }
+.tpl-pick-enhancv-joanna .grid { display: flex; gap: 6mm; margin-top: 4mm; }
+.tpl-pick-enhancv-joanna .rail { width: 64mm; flex: none; background: #f0fdf4; padding: 6mm 4mm; border-radius: 8px; }
+.tpl-pick-enhancv-joanna .body { flex: 1; }
+.tpl-pick-enhancv-joanna h1 { font-size: 26pt; font-weight: 700; color: #111827; }
+.tpl-pick-enhancv-joanna .headline-pill { display: inline-block; background: #a7f3d0; color: #065f46; font-size: 8.5pt; font-weight: 700; padding: 1.5mm 3.5mm; border-radius: 20px; text-transform: uppercase; margin-top: 2.5mm; letter-spacing: 0.5px; }
+.tpl-pick-enhancv-joanna .photo-container { position: relative; width: 34mm; height: 34mm; margin: 0 auto 5mm; }
+.tpl-pick-enhancv-joanna .photo-bg-shapes { position: absolute; inset: -4px; border-radius: 50%; background: linear-gradient(135deg, #a7f3d0 0%, #34d399 100%); z-index: 1; opacity: 0.7; }
+.tpl-pick-enhancv-joanna .photo, .tpl-pick-enhancv-joanna .photo-fallback { position: relative; width: 34mm; height: 34mm; border-radius: 50%; z-index: 2; border: 2pt solid #fff; margin: 0 auto; }
+.tpl-pick-enhancv-joanna .sec h2 { color: #065f46; font-size: 10.5pt; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 2mm; border-bottom: none; }
+.tpl-pick-enhancv-joanna .sec h2::before { content: "✓"; color: #059669; font-size: 11pt; background: #d1fae5; width: 5.5mm; height: 5.5mm; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 1mm; font-weight: 800; }
+.tpl-pick-enhancv-joanna .contact-list { list-style: none; padding: 0; margin: 0; }
+.tpl-pick-enhancv-joanna .contact-list li { font-size: 9pt; margin-bottom: 2mm; display: flex; align-items: center; gap: 2mm; word-break: break-all; }
+.tpl-pick-enhancv-joanna .skills-list { display: flex; flex-direction: column; gap: 1.5mm; }
+.tpl-pick-enhancv-joanna .skills-list span { font-weight: 500; font-size: 9pt; color: #374151; }
+</style><div><div class="tpl-pick-enhancv-joanna">
+      <div class="grid">
+        <aside class="rail"><div class="photo-container"><div class="photo-bg-shapes"></div><div class="photo-fallback">AS</div></div><section class="sec"><h2>Contacts</h2><ul class="contact-list"><li>aditi.sharma@email.com</li><li>+91 98765 43210</li><li>Bengaluru, India</li><li>aditi.dev</li><li>linkedin.com/in/aditisharma</li></ul></section><section class="sec"><h2>Skills</h2><div class="skills-list"><span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>GraphQL</span><span>Testing Library</span><span>Web Performance</span><span>Accessibility (WCAG 2.2)</span><span>CI/CD</span><span>PostgreSQL</span></div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></aside>
+        <div class="body">
+          <header>
+      <h1>Aditi Sharma</h1>
+      <div class="headline-pill">Senior Frontend Engineer</div>
+    </header>
+          <section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section>
+          <section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section>
+          
+          <section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section>
+          
+        </div>
+      </div>
+    </div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Joanna Nelson Style</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#10b981"></span><p class="mt-2 text-xs text-muted-foreground">Sage sidebar, round photo overlays, solid green pill subtitle, and section headers with circle badge icons.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Startups, creative leaders, founders</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-enhancv-pablo { color: #111827; line-height: 1.42; }
+.tpl-pick-enhancv-pablo * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-enhancv-pablo h1, .tpl-pick-enhancv-pablo h2 { font-weight: 700; }
+.tpl-pick-enhancv-pablo h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-enhancv-pablo .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-enhancv-pablo .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-enhancv-pablo .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-pablo .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-enhancv-pablo .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-pablo .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-enhancv-pablo .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-enhancv-pablo .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-enhancv-pablo .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-enhancv-pablo p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-enhancv-pablo ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-enhancv-pablo li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-pablo .skills { font-size: 10pt; }
+.tpl-pick-enhancv-pablo a { color: inherit; text-decoration: none; }
+.tpl-pick-enhancv-pablo .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-enhancv-pablo .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-enhancv-pablo .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-enhancv-pablo .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-enhancv-pablo { font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+.tpl-pick-enhancv-pablo header { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #1e1b4b; padding-bottom: 3.5mm; }
+.tpl-pick-enhancv-pablo h1 { color: #1e1b4b; font-size: 26pt; font-weight: 800; text-transform: uppercase; }
+.tpl-pick-enhancv-pablo .subtitle-blue { color: #2563eb; font-size: 10.5pt; font-weight: 700; margin-top: 1.5mm; }
+.tpl-pick-enhancv-pablo .contact-horizontal { display: flex; flex-wrap: wrap; gap: 4mm; font-size: 9pt; color: #4b5563; margin-top: 2.5mm; }
+.tpl-pick-enhancv-pablo .photo, .tpl-pick-enhancv-pablo .photo-fallback { width: 28mm; height: 28mm; border-radius: 50%; border: 2pt solid #2563eb; }
+.tpl-pick-enhancv-pablo .sec h2 { color: #1e1b4b; border-bottom: 2px solid #1e1b4b; padding-bottom: 1mm; font-size: 11pt; font-weight: 700; text-transform: uppercase; margin-top: 5mm; }
+.tpl-pick-enhancv-pablo .skills-table { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 2mm; }
+.tpl-pick-enhancv-pablo .skills-table span { border-bottom: 2px solid #e2e8f0; padding: 1.5mm 3mm; font-weight: 500; background: #f8fafc; font-size: 9pt; border-radius: 4px; }
+.tpl-pick-enhancv-pablo .skills-table span:hover { border-bottom-color: #2563eb; }
+</style><div><div class="tpl-pick-enhancv-pablo"><header>
+      <div class="head-text">
+        <h1>Aditi Sharma</h1>
+        <p class="subtitle-blue">Senior Frontend Engineer</p>
+        <div class="contact-horizontal">aditi.sharma@email.com &nbsp;•&nbsp; +91 98765 43210 &nbsp;•&nbsp; Bengaluru, India &nbsp;•&nbsp; aditi.dev &nbsp;•&nbsp; linkedin.com/in/aditisharma</div>
+      </div>
+      <div class="photo-fallback">AS</div>
+    </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Experience</h2><div class="item">
+        <div class="row"><span class="strong">Senior Frontend Engineer</span><span class="meta">Mar 2022 — Present</span></div>
+        <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+        <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+      </div><div class="item">
+        <div class="row"><span class="strong">Frontend Engineer</span><span class="meta">Jul 2019 — Feb 2022</span></div>
+        <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+        <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+      </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Skills</h2><div class="skills-table"><span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>GraphQL</span><span>Testing Library</span><span>Web Performance</span><span>Accessibility (WCAG 2.2)</span><span>CI/CD</span><span>PostgreSQL</span></div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Pablo Cruz Style</span><span class="flex items-center gap-1"><span class="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image size-3" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg> Photo</span></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#2563eb"></span><p class="mt-2 text-xs text-muted-foreground">Bold top header, photo on right, horizontal contacts list, and side-by-side strengths block.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Managers, engineers, account directors</p></div></button><button type="button" aria-pressed="false" class="rounded-xl border overflow-hidden text-left transition-colors flex flex-col h-full shrink-0 w-[280px] sm:w-auto snap-start border-border bg-card hover:border-primary/40"><div class="h-[200px] w-full overflow-hidden bg-secondary/30 p-2 border-b border-border flex items-start justify-center"><div class="h-[297mm] w-[55mm] overflow-hidden"><div class="w-[210mm] min-h-[297mm] bg-white px-[16mm] py-[14mm] text-black shadow-sm" style="transform:scale(0.26);transform-origin:top left"><style>
+.tpl-pick-enhancv-will { color: #111827; line-height: 1.42; }
+.tpl-pick-enhancv-will * { box-sizing: border-box; font-family: inherit; }
+.tpl-pick-enhancv-will h1, .tpl-pick-enhancv-will h2 { font-weight: 700; }
+.tpl-pick-enhancv-will h1 { margin: 0; font-size: 24pt; letter-spacing: -0.2pt; }
+.tpl-pick-enhancv-will .headline { margin: 2mm 0 0; font-size: 10.5pt; }
+.tpl-pick-enhancv-will .contact { margin: 2mm 0 0; font-size: 9pt; color: #374151; }
+.tpl-pick-enhancv-will .sec { margin-top: 5mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-will .sec h2 { margin: 0 0 2mm; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1pt; break-after: avoid; page-break-after: avoid; }
+.tpl-pick-enhancv-will .item { margin-bottom: 3mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-will .row { display: flex; justify-content: space-between; gap: 6mm; align-items: baseline; }
+.tpl-pick-enhancv-will .strong { font-weight: 700; font-size: 10.5pt; }
+.tpl-pick-enhancv-will .sub { font-size: 10pt; color: #374151; }
+.tpl-pick-enhancv-will .meta { font-size: 9pt; color: #4b5563; white-space: nowrap; }
+.tpl-pick-enhancv-will p { margin: 1.5mm 0 0; font-size: 10pt; }
+.tpl-pick-enhancv-will ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.tpl-pick-enhancv-will li { font-size: 10pt; margin-bottom: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.tpl-pick-enhancv-will .skills { font-size: 10pt; }
+.tpl-pick-enhancv-will a { color: inherit; text-decoration: none; }
+.tpl-pick-enhancv-will .photo { width: 30mm; height: 30mm; object-fit: cover; display: block; }
+.tpl-pick-enhancv-will .photo-fallback { width: 30mm; height: 30mm; display: flex; align-items: center; justify-content: center;
+  background: #e5e7eb; color: #4b5563; font-size: 14pt; font-weight: 700; }
+.tpl-pick-enhancv-will .head-flex { display: flex; align-items: center; gap: 6mm; }
+.tpl-pick-enhancv-will .head-flex .head-text { flex: 1; }
+
+
+.tpl-pick-enhancv-will { font-family: Helvetica, Arial, sans-serif; font-size: 9.5pt; }
+.tpl-pick-enhancv-will h1 { font-size: 28pt; font-weight: 800; color: #111827; }
+.tpl-pick-enhancv-will .headline-will { color: #4b5563; font-size: 11pt; font-weight: 500; border-bottom: 1px solid #e5e7eb; padding-bottom: 3mm; margin-top: 1.5mm; }
+.tpl-pick-enhancv-will .sec h2 { color: #111827; font-size: 11pt; font-weight: 700; text-transform: uppercase; border-bottom: 1.5pt solid #111827; padding-bottom: 1mm; }
+.tpl-pick-enhancv-will .timeline-wrapper { position: relative; padding-left: 6mm; margin-top: 4mm; }
+.tpl-pick-enhancv-will .timeline-line { position: absolute; left: 1.5mm; top: 2mm; bottom: 2mm; width: 1.5pt; background: #e5e7eb; }
+.tpl-pick-enhancv-will .timeline-item { position: relative; margin-bottom: 5mm; }
+.tpl-pick-enhancv-will .timeline-dot { position: absolute; left: -5.7mm; top: 1.5mm; width: 3.5mm; height: 3.5mm; border-radius: 50%; background: #111827; border: 1.5pt solid #fff; }
+.tpl-pick-enhancv-will .skills-table { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 2mm; }
+.tpl-pick-enhancv-will .skills-table span { border: 1px solid #d1d5db; padding: 1mm 2.5mm; font-weight: 500; font-size: 9pt; border-radius: 4px; }
+</style><div><div class="tpl-pick-enhancv-will"><header>
+      <h1>Aditi Sharma</h1>
+      <p class="headline-will">Senior Frontend Engineer</p>
+    </header><section class="sec"><h2>Summary</h2><p>Frontend engineer with 6 years building high-traffic React and TypeScript products. Led a checkout rewrite that lifted conversion 18% and mentors four engineers on performance and accessibility.</p></section><section class="sec"><h2>Experience & Internships</h2><div class="timeline-wrapper"><div class="timeline-line"></div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="row"><span class="strong">Senior Frontend Engineer </span><span class="meta">Mar 2022 — Present</span></div>
+            <div class="row"><span class="sub">Zeta Payments — Bengaluru</span></div>
+            <ul><li>Led a 4-engineer rewrite of the checkout flow, lifting conversion 18% on 2.4M monthly sessions.</li><li>Cut initial bundle size 41% through route-level code splitting and image optimisation.</li><li>Introduced a design-system package now used by 9 product squads.</li></ul>
+          </div>
+        
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="row"><span class="strong">Frontend Engineer </span><span class="meta">Jul 2019 — Feb 2022</span></div>
+            <div class="row"><span class="sub">Kite Analytics — Remote</span></div>
+            <ul><li>Shipped a real-time dashboard handling 50k events/min with virtualised tables.</li><li>Raised automated test coverage from 22% to 78%, halving production regressions.</li></ul>
+          </div>
+        </div></section><section class="sec"><h2>Education</h2><div class="item">
+        <div class="row"><span class="strong">B.Tech, Computer Science</span><span class="meta">2015 — 2019</span></div>
+        <div class="row"><span class="sub">VIT Vellore</span></div>
+        <p>CGPA 8.7 / 10</p>
+      </div></section><section class="sec"><h2>Skills</h2><div class="skills-table"><span>React</span><span>TypeScript</span><span>Next.js</span><span>Node.js</span><span>GraphQL</span><span>Testing Library</span><span>Web Performance</span><span>Accessibility (WCAG 2.2)</span><span>CI/CD</span><span>PostgreSQL</span></div></section><section class="sec"><h2>Projects</h2><div class="item">
+        <div class="row"><span class="strong">Chartkit</span><span class="meta">TypeScript, Canvas</span></div>
+        <p>Open-source charting library with 1.8k GitHub stars and 40k monthly npm downloads.</p>
+      </div></section><section class="sec"><h2>Certifications</h2><ul><li>AWS Certified Developer — Associate (2024)</li></ul></section></div></div></div></div></div><div class="p-4 flex flex-col justify-between flex-grow w-full"><div><div class="flex items-center justify-between gap-2"><span class="font-display text-sm font-semibold">Will Lee Style</span><span class="flex items-center gap-1"></span></div><span class="mt-2 block h-1.5 w-12 rounded-full" style="background-color:#3b82f6"></span><p class="mt-2 text-xs text-muted-foreground">Sleek timeline dots, vertical experience timeline rules, and horizontal progress bars.</p></div><p class="mt-2 text-[11px] uppercase tracking-wide text-muted-foreground">Best for: <!-- -->Consultants, project leads, data analysts</p></div></button></div></div></section><section class="panel mt-8 space-y-4 p-6"><div class="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4"><div><h2 class="font-display text-lg font-semibold">Start with AI</h2><p class="text-sm text-muted-foreground">Describe your background, paste notes, or upload your old resume to begin.</p></div><input type="file" accept=".pdf,.txt,.md" class="hidden"/><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload size-4" aria-hidden="true"><path d="M12 3v12"></path><path d="m17 8-5-5-5 5"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path></svg>Upload old resume</button></div><div class="space-y-1.5 pt-2"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Target role (optional)</label><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" placeholder="e.g. Senior Backend Engineer at a fintech" value=""/></div><div class="space-y-1.5"><label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-xs text-muted-foreground">Your background</label><textarea class="flex w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm min-h-40" placeholder="4 years as a frontend dev at Zeta, React + TypeScript, led the checkout rewrite, B.Tech CSE from VIT 2020, built an open-source charting library…"></textarea></div><div class="flex flex-wrap gap-3"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>Build my resume</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 h-9 px-4 py-2" disabled=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wand-sparkles" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg>Polish current resume</button></div></section><aside aria-label="Advertisement" class="panel flex items-center justify-center border-dashed bg-secondary/40 mt-12 h-24 sm:h-28"><div class="text-center text-xs tracking-wide text-muted-foreground uppercase"><p class="font-medium">Ad space</p><p class="mt-1 font-mono text-[10px] normal-case opacity-70">Footer leaderboard — 728x90</p></div></aside><section class="mt-16 space-y-4"><h2 class="font-display text-2xl font-semibold">How the AI resume builder works</h2><ol class="space-y-3 text-sm text-muted-foreground"><li><strong class="text-foreground">1. Describe your background.</strong> Paste an old resume or type rough notes — job titles, dates, wins, education.</li><li><strong class="text-foreground">2. AI structures and writes it.</strong> Gemini turns your notes into quantified achievement bullets, a summary and a keyword-rich skills list.</li><li><strong class="text-foreground">3. Pick a template and edit.</strong> Switch designs instantly; every field stays editable in the form.</li><li><strong class="text-foreground">4. Download.</strong> Export a print-perfect A4 PDF, or a plain-text version for job boards that only accept pasted text.</li></ol><p class="text-sm text-muted-foreground">Want a score before you apply? Run the finished resume through the<!-- --> <a class="text-primary underline-offset-4 hover:underline" href="/ats-checker">free ATS resume checker</a>.</p></section><footer class="mt-16 border-t border-border pt-8 text-sm"><div class="grid gap-8 sm:grid-cols-3"><div><p class="font-display text-base font-semibold">FixMyResume</p><p class="mt-2 text-xs leading-relaxed text-muted-foreground">Free AI ATS resume checker, resume optimiser and LaTeX resume editor. Your resume is analysed on demand and never stored.</p></div><nav aria-label="Site" class="space-y-2"><p class="text-xs font-medium uppercase tracking-widest text-muted-foreground">Product</p><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/">Resume builder</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/ats-checker">ATS checker &amp; LaTeX builder</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/cover-letter">AI Cover Letter</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/interview-prep">Interview Prep</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/pricing">Pricing</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/how-it-works">How it works</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/faq">FAQ</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/about">About</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/contact">Contact</a></nav><nav aria-label="Legal" class="space-y-2"><p class="text-xs font-medium uppercase tracking-widest text-muted-foreground">Legal</p><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/privacy">Privacy policy</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/terms">Terms of service</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/cookies">Cookie policy</a><a class="block text-muted-foreground transition-colors hover:text-foreground" href="/disclaimer">Disclaimer</a><a href="mailto:hello@fixmyresume.com" class="block text-muted-foreground transition-colors hover:text-foreground">hello@fixmyresume.com</a></nav></div><p class="mt-8 pb-4 text-center text-xs text-muted-foreground">© <!-- -->2026<!-- --> <!-- -->FixMyResume<!-- -->. Not affiliated with Workday, Greenhouse, Taleo or Google.</p></footer></main><aside aria-label="Advertisement" class="panel flex items-center justify-center border-dashed bg-secondary/40 sticky top-8 hidden h-[600px] w-32 shrink-0 lg:flex xl:w-40"><div class="text-center text-xs tracking-wide text-muted-foreground uppercase"><p class="font-medium">Ad space</p><p class="mt-1 font-mono text-[10px] normal-case opacity-70">Right skyscraper — 160x600</p></div></aside></div><!--$--><!--/$--><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false" data-react-aria-top-layer="true"></section><script src="/_next/static/chunks/webpack-b8045e1274458c25.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[5056,[\"720\",\"static/chunks/720-e077da836e6deae1.js\",\"106\",\"static/chunks/106-9fbc1c722d9f2975.js\",\"177\",\"static/chunks/app/layout-4284c6258f690886.js\"],\"Providers\"]\n3:I[9766,[],\"\"]\n4:I[8924,[],\"\"]\n5:I[8720,[\"720\",\"static/chunks/720-e077da836e6deae1.js\",\"106\",\"static/chunks/106-9fbc1c722d9f2975.js\",\"177\",\"static/chunks/app/layout-4284c6258f690886.js\"],\"Toaster\"]\n6:I[1959,[],\"ClientPageRoot\"]\n7:I[8362,[\"720\",\"static/chunks/720-e077da836e6deae1.js\",\"2\",\"static/chunks/2-6e8ab1edebb5595c.js\",\"106\",\"static/chunks/106-9fbc1c722d9f2975.js\",\"371\",\"static/chunks/371-fff2a60acdc778a1.js\",\"341\",\"static/chunks/341-8778e69948401863.js\",\"633\",\"static/chunks/633-de32f2f2c23c86eb.js\",\"940\",\"static/chunks/940-9b5b79c49c20e950.js\",\"974\",\"static/chunks/app/page-d53d5594855f4761.js\"],\"default\"]\na:I[4431,[],\"OutletBoundary\"]\nc:I[5278,[],\"AsyncMetadataOutlet\"]\ne:I[4431,[],\"ViewportBoundary\"]\n10:I[4431,[],\"MetadataBoundary\"]\n11:\"$Sreact.suspense\"\n13:I[7150,[],\"\"]\n:HL[\"/_next/static/css/375a339e59821760.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"sGuOh54WUqmJIXbyzyUYy\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/375a339e59821760.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"rel\":\"stylesheet\",\"href\":\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700\u0026family=DM+Sans:wght@400;500\u0026family=JetBrains+Mono:wght@400\u0026display=swap\"}]]}],[\"$\",\"body\",null,{\"className\":\"__className_f367f3\",\"children\":[\"$\",\"$L2\",null,{\"children\":[[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}],[\"$\",\"$L5\",null,{\"className\":\"toaster group\",\"toastOptions\":{\"classNames\":{\"toast\":\"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\",\"description\":\"group-[.toast]:text-muted-foreground\",\"actionButton\":\"group-[.toast]:bg-primary group-[.toast]:text-primary-foreground\",\"cancelButton\":\"group-[.toast]:bg-muted group-[.toast]:text-muted-foreground\"}}}]]}]}]]}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L6\",null,{\"Component\":\"$7\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@8\",\"$@9\"]}],null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",[\"$\",\"$Lc\",null,{\"promise\":\"$@d\"}]]}]]}],{},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],null],[\"$\",\"$L10\",null,{\"children\":[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$11\",null,{\"fallback\":null,\"children\":\"$L12\"}]}]}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$13\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"8:{}\n9:\"$0:f:0:1:2:children:1:props:children:0:props:params\"\n"])</script><script>self.__next_f.push([1,"f:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])</script><script>self.__next_f.push([1,"14:I[622,[],\"IconMark\"]\n"])</script><script>self.__next_f.push([1,"d:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"FixMyResume — AI ATS Resume Scorer \u0026 LaTeX Editor\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace.\"}],[\"$\",\"meta\",\"2\",{\"property\":\"og:title\",\"content\":\"FixMyResume — AI ATS Resume Scorer \u0026 LaTeX Editor\"}],[\"$\",\"meta\",\"3\",{\"property\":\"og:description\",\"content\":\"AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace.\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"5\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"6\",{\"name\":\"twitter:title\",\"content\":\"FixMyResume — AI ATS Resume Scorer \u0026 LaTeX Editor\"}],[\"$\",\"meta\",\"7\",{\"name\":\"twitter:description\",\"content\":\"AI resume ATS scoring, keyword gap fixes and an AI LaTeX resume editor in one workspace.\"}],[\"$\",\"link\",\"8\",{\"rel\":\"icon\",\"href\":\"/favicon.svg\"}],[\"$\",\"$L14\",\"9\",{}]],\"error\":null,\"digest\":\"$undefined\"}\n"])</script><script>self.__next_f.push([1,"12:\"$d:metadata\"\n"])</script></body></html>

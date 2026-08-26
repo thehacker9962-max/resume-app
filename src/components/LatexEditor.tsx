@@ -3,7 +3,7 @@ import { Copy, Download, Loader2, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../hooks/use-auth";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "@/hooks/use-navigate";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { ResumePreview } from "@/components/ResumePreview";

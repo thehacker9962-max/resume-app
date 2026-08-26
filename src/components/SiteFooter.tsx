@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { LEGAL_LINKS, NAV_LINKS, SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
 
 export function SiteFooter() {
@@ -19,7 +19,7 @@ export function SiteFooter() {
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
-              to={link.to}
+              href={link.to}
               className="block text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
@@ -33,7 +33,7 @@ export function SiteFooter() {
           {LEGAL_LINKS.map((link) => (
             <Link
               key={link.to}
-              to={link.to}
+              href={link.to}
               className="block text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}

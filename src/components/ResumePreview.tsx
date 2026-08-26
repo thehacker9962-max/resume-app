@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { latexToHtml, RESUME_PRINT_CSS } from "@/lib/latex-to-html";
 import { useAuth } from "../hooks/use-auth";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "@/hooks/use-navigate";
 import { downloadHtmlAsPdf } from "@/lib/pdf-downloader";
 
 type Props = { code: string };

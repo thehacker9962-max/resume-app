@@ -3,7 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/use-auth";
 import { useLocationPricing } from "@/hooks/use-location-pricing";
-import { Link, useNavigate } from "@tanstack/react-router";
+import Link from "next/link";
+import { useNavigate } from "@/hooks/use-navigate";
 
 type Props = {
   isOpen: boolean;
@@ -126,7 +127,7 @@ export function UpgradeModal({ isOpen, onClose, reason }: Props) {
             <span className="flex items-center gap-1">
               <ShieldCheck className="size-3.5 text-primary" /> 100% Secure Checkout
             </span>
-            <Link to="/pricing" onClick={onClose} className="hover:underline text-primary font-medium">
+            <Link href="/pricing" onClick={onClose} className="hover:underline text-primary font-medium">
               View Detailed Plan Options &rarr;
             </Link>
           </div>
