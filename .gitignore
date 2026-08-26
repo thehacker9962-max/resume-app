@@ -39,4 +39,7 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Next.js
+.next/
+
 
