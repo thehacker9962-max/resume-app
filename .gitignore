@@ -36,4 +36,7 @@ dist-ssr
 
 # Local environment variables containing API keys/secrets
 .env
+.env.local
+.env.*.local
+
 

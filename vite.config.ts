@@ -12,4 +12,15 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    preset: process.env.VERCEL ? "vercel" : (process.env.NETLIFY ? "netlify" : undefined),
+    inlineDynamicImports: true,
+  },
+  vite: {
+    ssr: {
+      optimizeDeps: {
+        include: ["@tanstack/react-start", "@tanstack/start-client-core"],
+      },
+    },
+  },
 });
