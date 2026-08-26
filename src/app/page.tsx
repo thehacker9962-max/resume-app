@@ -16,7 +16,7 @@ import { TemplatePicker } from "@/components/TemplatePicker";
 import { ResumeSheet } from "@/components/ResumeSheet";
 import { EMPTY_RESUME, type ResumeData } from "@/lib/builder.schemas";
 import type { TemplateId } from "@/lib/resume-templates";
-import { buildResume, polishResume, parseResumeTextWithAi } from "@/lib/builder.functions";
+import { buildResume, polishResume, parseResumePdfWithPython } from "@/lib/builder.functions";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { extractPdfText } from "@/lib/pdf-parser";
@@ -62,24 +62,26 @@ export default function BuilderPage() {
       return;
     }
     setParsingDirect(true);
-    const toastId = toast.loading(`Uploading and parsing ${file.name}...`);
+    const toastId = toast.loading(`Uploading and parsing ${file.name} with Python...`);
     try {
-      const text =
-        file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")
-          ? await extractPdfText(file)
-          : await file.text();
+      const base64 = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const resultStr = reader.result as string;
+          const base64Data = resultStr.split(",")[1];
+          resolve(base64Data || "");
+        };
+        reader.onerror = (e) => reject(e);
+        reader.readAsDataURL(file);
+      });
 
-      if (!text || text.trim().length === 0) {
-        throw new Error("No selectable text found in the PDF. Make sure it is not scanned/an image.");
-      }
-
-      const result = await parseResumeTextWithAi({ text });
+      const result = await parseResumePdfWithPython({ pdfBase64: base64 });
       if (result.error) {
         throw new Error(result.error);
       }
       setData({ ...result, photo: data.photo });
       registerUploadOrEdit();
-      toast.success("Resume details extracted successfully!", { id: toastId });
+      toast.success("Resume details extracted via Python successfully!", { id: toastId });
     } catch (err: any) {
       console.error(err);
       toast.error(err?.message || "Could not extract details. Make sure the PDF has selectable text.", { id: toastId });

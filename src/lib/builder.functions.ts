@@ -1,6 +1,11 @@
 "use server";
 
-import { streamText, Output, generateText } from "ai";
+import { streamText, Output } from "ai";
+import { exec } from "child_process";
+import { promisify } from "util";
+import * as fs from "fs/promises";
+import * as path from "path";
+import { tmpdir } from "os";
 import { z } from "zod";
 import {
   createLovableAiGatewayProvider,
@@ -15,31 +20,50 @@ import {
   POLISH_SYSTEM,
 } from "./builder.schemas";
 
-export async function parseResumeTextWithAi(input: { text: string }) {
-  const { text } = z.object({ text: z.string() }).parse(input);
-  const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
-    structuredOutputs: true,
-  });
+const execAsync = promisify(exec);
 
+export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
+  const data = z.object({ pdfBase64: z.string() }).parse(input);
+  const tempDir = tmpdir();
+  const tempFilePath = path.join(tempDir, `resume_${Date.now()}.pdf`);
+  
+  // Write base64 buffer to temp file
+  const buffer = Buffer.from(data.pdfBase64, "base64");
+  await fs.writeFile(tempFilePath, buffer);
+  
   try {
-    const result = await generateText({
-      model: gateway(CHAT_MODEL),
-      system: `You are an expert resume parser. Extract the structured details of the candidate's resume from the raw text provided.
-You must map the extracted content to the fields of the schema.
-Return only the structured JSON representation of the resume details.`,
-      output: Output.object({ schema: AiResumeSchema }),
-      prompt: text.slice(0, 30000),
-    });
-
-    return result.output;
-  } catch (error: any) {
-    console.error("AI Parsing detailed error:", error);
-    const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
-    return {
-      error: `AI Parsing failed: ${error.message || String(error)}${
-        causeMessage ? ` (Cause: ${causeMessage})` : ""
-      }`
-    };
+    const scriptPath = path.resolve(process.cwd(), "src", "lib", "parser.py");
+    
+    let stdout = "";
+    let stderr = "";
+    try {
+      const result = await execAsync(`python "${scriptPath}" "${tempFilePath}"`);
+      stdout = result.stdout;
+      stderr = result.stderr;
+    } catch (err: any) {
+      stdout = err.stdout || "";
+      stderr = err.stderr || "";
+      const errorMsg = err.message || String(err);
+      return {
+        error: `Python execution failed.\nDetails: ${errorMsg}\nStdout: ${stdout}\nStderr: ${stderr}`
+      };
+    }
+    
+    if (stderr) {
+      console.error("Python parser stderr:", stderr);
+    }
+    
+    try {
+      const result = JSON.parse(stdout);
+      return result;
+    } catch (jsonErr) {
+      return {
+        error: `Python output could not be parsed as JSON.\nStdout: ${stdout}\nStderr: ${stderr}`
+      };
+    }
+  } finally {
+    // Clean up
+    await fs.unlink(tempFilePath).catch(() => {});
   }
 }
 
