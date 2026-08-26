@@ -1,6 +1,6 @@
 "use server";
 
-import { streamText, Output } from "ai";
+import { streamText, Output, generateText } from "ai";
 import { exec } from "child_process";
 import { promisify } from "util";
 import * as fs from "fs/promises";
@@ -64,6 +64,43 @@ export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
   } finally {
     // Clean up
     await fs.unlink(tempFilePath).catch(() => {});
+  }
+}
+
+export async function checkAiConfigured() {
+  try {
+    requireLovableApiKey();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export async function parseResumeTextWithAi(input: { text: string }) {
+  const { text } = z.object({ text: z.string() }).parse(input);
+  const gateway = createLovableAiGatewayProvider(requireLovableApiKey(), undefined, {
+    structuredOutputs: true,
+  });
+
+  try {
+    const result = await generateText({
+      model: gateway(CHAT_MODEL),
+      system: `You are an expert resume parser. Extract the structured details of the candidate's resume from the raw text provided.
+You must map the extracted content to the fields of the schema.
+Return only the structured JSON representation of the resume details.`,
+      output: Output.object({ schema: AiResumeSchema }),
+      prompt: text.slice(0, 30000),
+    });
+
+    return result.output;
+  } catch (error: any) {
+    console.error("AI Parsing detailed error:", error);
+    const causeMessage = error.cause?.message || (error.cause ? String(error.cause) : "");
+    return {
+      error: `AI Parsing failed: ${error.message || String(error)}${
+        causeMessage ? ` (Cause: ${causeMessage})` : ""
+      }`
+    };
   }
 }
 
