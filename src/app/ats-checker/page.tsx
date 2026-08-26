@@ -135,7 +135,7 @@ export default function AtsCheckerPage() {
         <main className="w-full max-w-5xl">
           <header className="text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs text-muted-foreground">
-              <Gauge className="size-3.5 text-primary" /> Powered by Gemini via Lovable AI
+              <Gauge className="size-3.5 text-primary" /> Powered by Gemini AI
             </span>
             <h1 className="mt-2 font-display text-3xl font-bold sm:text-4xl">
               Free AI ATS resume checker

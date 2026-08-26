@@ -34,8 +34,8 @@ export function createLovableAiGatewayProvider(
       apiKey: process.env["OPENROUTER_API_KEY"],
       supportsStructuredOutputs: options?.structuredOutputs ?? false,
       headers: {
-        "HTTP-Referer": "https://lovable.dev",
-        "X-Title": "Latex Lovable Resume Builder",
+        "HTTP-Referer": "https://fixmyresume.app",
+        "X-Title": "FixMyResume Builder",
       },
       fetch: async (url, init) => {
         if (init && init.body && typeof init.body === "string") {
