@@ -16,7 +16,7 @@ import { TemplatePicker } from "@/components/TemplatePicker";
 import { ResumeSheet } from "@/components/ResumeSheet";
 import { EMPTY_RESUME, type ResumeData } from "@/lib/builder.schemas";
 import type { TemplateId } from "@/lib/resume-templates";
-import { buildResume, polishResume, parseResumePdfWithPython, parseResumeTextWithAi, checkAiConfigured } from "@/lib/builder.functions";
+import { buildResume, polishResume, parseResumePdfWithPython } from "@/lib/builder.functions";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { extractPdfText } from "@/lib/pdf-parser";
@@ -62,55 +62,26 @@ export default function BuilderPage() {
       return;
     }
     setParsingDirect(true);
-    
-    // Check if AI is configured in the environment (e.g. Netlify/Vercel)
-    const isAiConfigured = await checkAiConfigured();
-    const toastMsg = isAiConfigured 
-      ? `Uploading and parsing ${file.name} with AI...`
-      : `Uploading and parsing ${file.name} with Python...`;
-    
-    const toastId = toast.loading(toastMsg);
+    const toastId = toast.loading(`Uploading and parsing ${file.name} with Python...`);
     try {
-      let result;
-      if (isAiConfigured) {
-        // Extract text client-side and parse using Gemini (works perfectly on Netlify/serverless!)
-        const text =
-          file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")
-            ? await extractPdfText(file)
-            : await file.text();
+      const base64 = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const resultStr = reader.result as string;
+          const base64Data = resultStr.split(",")[1];
+          resolve(base64Data || "");
+        };
+        reader.onerror = (e) => reject(e);
+        reader.readAsDataURL(file);
+      });
 
-        if (!text || text.trim().length === 0) {
-          throw new Error("No selectable text found in the PDF. Make sure it is not scanned/an image.");
-        }
-
-        result = await parseResumeTextWithAi({ text });
-      } else {
-        // Fallback to local Python-based parsing (no API key required)
-        const base64 = await new Promise<string>((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => {
-            const resultStr = reader.result as string;
-            const base64Data = resultStr.split(",")[1];
-            resolve(base64Data || "");
-          };
-          reader.onerror = (e) => reject(e);
-          reader.readAsDataURL(file);
-        });
-
-        result = await parseResumePdfWithPython({ pdfBase64: base64 });
-      }
-
+      const result = await parseResumePdfWithPython({ pdfBase64: base64 });
       if (result.error) {
         throw new Error(result.error);
       }
       setData({ ...result, photo: data.photo });
       registerUploadOrEdit();
-      toast.success(
-        isAiConfigured 
-          ? "Resume details extracted via AI successfully!" 
-          : "Resume details extracted via Python successfully!", 
-        { id: toastId }
-      );
+      toast.success("Resume details extracted via Python successfully!", { id: toastId });
     } catch (err: any) {
       console.error(err);
       toast.error(err?.message || "Could not extract details. Make sure the PDF has selectable text.", { id: toastId });
