@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Suspense } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
@@ -24,9 +24,11 @@ function AuthPageContent() {
   const [loading, setLoading] = useState(false);
 
   // If already authenticated, redirect immediately
-  if (isAuthenticated) {
-    navigate({ to: redirect });
-  }
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate({ to: redirect });
+    }
+  }, [isAuthenticated, redirect, navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
