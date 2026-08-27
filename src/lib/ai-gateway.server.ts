@@ -80,11 +80,11 @@ export function createLovableAiGatewayProvider(
       if (cleanModelId.startsWith("gemini-")) {
         // Keep specific versioned models
       } else if (cleanModelId.includes("flash")) {
-        cleanModelId = "gemini-3.6-flash";
+        cleanModelId = "gemini-2.5-flash";
       } else if (cleanModelId.includes("pro")) {
         cleanModelId = "gemini-2.5-pro";
       } else {
-        cleanModelId = "gemini-3.6-flash";
+        cleanModelId = "gemini-2.5-flash";
       }
       return google(cleanModelId);
     };
@@ -104,7 +104,7 @@ export function createLovableAiGatewayProvider(
   });
 }
 
-export const CHAT_MODEL = "google/gemini-3.6-flash";
+export const CHAT_MODEL = "google/gemini-2.5-flash";
 
 export function requireLovableApiKey() {
   const openrouterKey = process.env["OPENROUTER_API_KEY"];
