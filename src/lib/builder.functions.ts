@@ -25,30 +25,34 @@ const execAsync = promisify(exec);
 export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
   const data = z.object({ pdfBase64: z.string() }).parse(input);
 
-  // If we are running on Netlify, call our Python Serverless Function!
-  if (process.env.NETLIFY) {
+  // Helper to invoke the Netlify Python Serverless Function
+  async function callNetlifyFunction() {
     const siteUrl = process.env.URL || "";
+    const response = await fetch(`${siteUrl}/.netlify/functions/parser`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pdfBase64: data.pdfBase64 }),
+    });
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Netlify Python function failed with status ${response.status}: ${errorText}`);
+    }
+    return await response.json();
+  }
+
+  // 1. Check if running in a serverless environment (Netlify, AWS Lambda, etc.)
+  const isServerless = process.env.NETLIFY || process.env.SITE_NAME || process.env.URL || process.env.LAMBDA_TASK_ROOT;
+  if (isServerless) {
     try {
-      const response = await fetch(`${siteUrl}/.netlify/functions/parser`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ pdfBase64: data.pdfBase64 }),
-      });
-      if (!response.ok) {
-        const errorText = await response.text();
-        return {
-          error: `Netlify Python function failed with status ${response.status}: ${errorText}`
-        };
-      }
-      return await response.json();
+      return await callNetlifyFunction();
     } catch (err: any) {
       return {
-        error: `Failed to call Netlify Python function: ${err.message || String(err)}`
+        error: `Netlify Python function failed: ${err.message || String(err)}`
       };
     }
   }
 
-  // Otherwise, run locally using exec and python command (original logic)
+  // 2. Otherwise (locally), try to run using the local python executable
   const tempDir = tmpdir();
   const tempFilePath = path.join(tempDir, `resume_${Date.now()}.pdf`);
   
@@ -69,6 +73,19 @@ export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
       stdout = err.stdout || "";
       stderr = err.stderr || "";
       const errorMsg = err.message || String(err);
+      
+      // Fallback: If python is not found, attempt to call the Netlify serverless function
+      if (errorMsg.includes("not found") || errorMsg.includes("ENOENT") || errorMsg.includes("command not found")) {
+        console.log("Python not found locally, falling back to Netlify function...");
+        try {
+          return await callNetlifyFunction();
+        } catch (fallbackErr: any) {
+          return {
+            error: `Python command not found locally, and serverless fallback failed: ${fallbackErr.message || String(fallbackErr)}`
+          };
+        }
+      }
+      
       return {
         error: `Python execution failed.\nDetails: ${errorMsg}\nStdout: ${stdout}\nStderr: ${stderr}`
       };
