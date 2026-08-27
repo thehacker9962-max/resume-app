@@ -1,11 +1,15 @@
-import * as pdfjs from "pdfjs-dist";
+export async function extractPdfTextClient(file: File): Promise<string> {
+  const pdfjsLib = (window as any).pdfjsLib;
+  if (!pdfjsLib) {
+    throw new Error("The PDF library is still loading. Please wait a second and try again.");
+  }
 
-export async function extractPdfTextServer(buffer: Buffer): Promise<string> {
-  const pdf = await pdfjs.getDocument({
-    data: new Uint8Array(buffer),
-    useSystemFonts: true,
-  }).promise;
-  
+  // Configure worker using matching CDN path
+  pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+
+  const buffer = await file.arrayBuffer();
+  const loadingTask = pdfjsLib.getDocument({ data: new Uint8Array(buffer) });
+  const pdf = await loadingTask.promise;
   const pages: string[] = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
