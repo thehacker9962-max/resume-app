@@ -7,6 +7,7 @@ import * as fs from "fs/promises";
 import * as path from "path";
 import { tmpdir } from "os";
 import { z } from "zod";
+import { headers } from "next/headers";
 import {
   createLovableAiGatewayProvider,
   CHAT_MODEL,
@@ -28,9 +29,17 @@ export async function parseResumePdfWithPython(input: { pdfBase64: string }) {
   // Helper to invoke the Netlify Python Serverless Function
   async function callNetlifyFunction() {
     const siteUrl = process.env.URL || "";
+    const nextHeaders = await headers();
+    const cookie = nextHeaders.get("cookie") || "";
+    const authorization = nextHeaders.get("authorization") || "";
+
     const response = await fetch(`${siteUrl}/.netlify/functions/parser`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        ...(cookie ? { "Cookie": cookie } : {}),
+        ...(authorization ? { "Authorization": authorization } : {}),
+      },
       body: JSON.stringify({ pdfBase64: data.pdfBase64 }),
     });
     if (!response.ok) {
