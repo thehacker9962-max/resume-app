@@ -59,7 +59,7 @@ export function createLovableAiGatewayProvider(
       if (!process.env["OPENROUTER_MODEL"]) {
         // Fallback mapping if no custom model is defined
         if (cleanModelId === "google/gemini-3.6-flash" || cleanModelId === "google/gemini-1.5-flash" || cleanModelId === "gemini-1.5-flash") {
-          cleanModelId = "openrouter/auto";
+          cleanModelId = "google/gemini-2.5-flash";
         }
       }
       return openrouter(cleanModelId);
