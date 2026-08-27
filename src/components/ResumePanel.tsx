@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { extractPdfText } from "@/lib/pdf-parser";
+import { extractPdfTextAction } from "@/lib/builder.functions";
 
 
 type Props = {
@@ -31,15 +31,30 @@ export function ResumePanel({
     if (!file) return;
     setParsing(true);
     try {
-      const text =
-        file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")
-          ? await extractPdfText(file)
-          : await file.text();
-      if (!text) throw new Error("No selectable text found.");
-      onResumeChange(text);
-      toast.success(`Loaded ${file.name}`);
-    } catch {
-      toast.error("Could not read that file. Try pasting the text instead.");
+      if (file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")) {
+        const base64 = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const resultStr = reader.result as string;
+            const base64Data = resultStr.split(",")[1];
+            resolve(base64Data || "");
+          };
+          reader.onerror = (e) => reject(e);
+          reader.readAsDataURL(file);
+        });
+
+        const result = await extractPdfTextAction({ pdfBase64: base64 });
+        if (result.error) throw new Error(result.error);
+        onResumeChange(result.text || "");
+        toast.success(`Loaded ${file.name}`);
+      } else {
+        const text = await file.text();
+        if (!text) throw new Error("No text found.");
+        onResumeChange(text);
+        toast.success(`Loaded ${file.name}`);
+      }
+    } catch (err: any) {
+      toast.error(err?.message || "Could not read that file. Try pasting the text instead.");
     } finally {
       setParsing(false);
     }

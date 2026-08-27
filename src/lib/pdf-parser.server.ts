@@ -1,8 +1,11 @@
-export async function extractPdfText(file: File): Promise<string> {
-  const { getDocument, GlobalWorkerOptions } = await import("pdfjs-dist");
-  GlobalWorkerOptions.workerSrc = "https://unpkg.com/pdfjs-dist@6.2.108/build/pdf.worker.min.mjs";
-  const buffer = await file.arrayBuffer();
-  const pdf = await getDocument({ data: buffer }).promise;
+import * as pdfjs from "pdfjs-dist";
+
+export async function extractPdfTextServer(buffer: Buffer): Promise<string> {
+  const pdf = await pdfjs.getDocument({
+    data: new Uint8Array(buffer),
+    useSystemFonts: true,
+  }).promise;
+  
   const pages: string[] = [];
 
   for (let i = 1; i <= pdf.numPages; i++) {
@@ -70,7 +73,6 @@ export async function extractPdfText(file: File): Promise<string> {
           const item = line[j];
           if (j > 0) {
             const prevItem = line[j - 1];
-            // Insert space if there is a gap or hasWriteSpaces is true
             const gap = item.x - (prevItem.x + prevItem.width);
             const needsSpace =
               !lineText.endsWith(" ") &&

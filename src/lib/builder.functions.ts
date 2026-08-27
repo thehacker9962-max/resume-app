@@ -25,13 +25,37 @@ const execAsync = promisify(exec);
 
 import { parseResumeTextLocally } from "./parser";
 
-export async function parseResumeText(input: { text: string }) {
-  const data = z.object({ text: z.string() }).parse(input);
+export async function parseResumeText(input: { pdfBase64?: string; text?: string }) {
+  const data = z.object({
+    pdfBase64: z.string().optional(),
+    text: z.string().optional()
+  }).parse(input);
+  
   try {
-    return parseResumeTextLocally(data.text);
+    let text = data.text || "";
+    if (data.pdfBase64) {
+      const buffer = Buffer.from(data.pdfBase64, "base64");
+      const { extractPdfTextServer } = await import("./pdf-parser.server");
+      text = await extractPdfTextServer(buffer);
+    }
+    return parseResumeTextLocally(text);
   } catch (error: any) {
     return {
       error: `Parsing failed: ${error.message || String(error)}`
+    };
+  }
+}
+
+export async function extractPdfTextAction(input: { pdfBase64: string }) {
+  const data = z.object({ pdfBase64: z.string() }).parse(input);
+  try {
+    const buffer = Buffer.from(data.pdfBase64, "base64");
+    const { extractPdfTextServer } = await import("./pdf-parser.server");
+    const text = await extractPdfTextServer(buffer);
+    return { text };
+  } catch (error: any) {
+    return {
+      error: `Could not parse PDF: ${error.message || String(error)}`
     };
   }
 }

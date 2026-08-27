@@ -19,7 +19,6 @@ import type { TemplateId } from "@/lib/resume-templates";
 import { buildResume, polishResume, parseResumeText } from "@/lib/builder.functions";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { extractPdfText } from "@/lib/pdf-parser";
 import { useAuth } from "@/hooks/use-auth";
 import { UpgradeModal } from "@/components/UpgradeModal";
 import { useNavigate } from "@/hooks/use-navigate";
@@ -64,22 +63,35 @@ export default function BuilderPage() {
     setParsingDirect(true);
     const toastId = toast.loading(`Uploading and parsing ${file.name}...`);
     try {
-      const text =
-        file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")
-          ? await extractPdfText(file)
-          : await file.text();
+      if (file.type === "application/pdf" || file.name.toLowerCase().endsWith(".pdf")) {
+        const base64 = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const resultStr = reader.result as string;
+            const base64Data = resultStr.split(",")[1];
+            resolve(base64Data || "");
+          };
+          reader.onerror = (e) => reject(e);
+          reader.readAsDataURL(file);
+        });
 
-      if (!text || text.trim().length === 0) {
-        throw new Error("No selectable text found in the PDF. Make sure it is not scanned/an image.");
+        const result = await parseResumeText({ pdfBase64: base64 });
+        if (result.error) {
+          throw new Error(result.error);
+        }
+        setData({ ...result, photo: data.photo });
+        registerUploadOrEdit();
+        toast.success("Resume details extracted successfully!", { id: toastId });
+      } else {
+        const text = await file.text();
+        const result = await parseResumeText({ text });
+        if (result.error) {
+          throw new Error(result.error);
+        }
+        setData({ ...result, photo: data.photo });
+        registerUploadOrEdit();
+        toast.success("Resume details extracted successfully!", { id: toastId });
       }
-
-      const result = await parseResumeText({ text });
-      if (result.error) {
-        throw new Error(result.error);
-      }
-      setData({ ...result, photo: data.photo });
-      registerUploadOrEdit();
-      toast.success("Resume details extracted successfully!", { id: toastId });
     } catch (err: any) {
       console.error(err);
       toast.error(err?.message || "Could not extract details. Make sure the PDF has selectable text.", { id: toastId });
